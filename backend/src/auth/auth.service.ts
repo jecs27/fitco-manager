@@ -3,6 +3,7 @@ import { Injectable, UnauthorizedException } from '@nestjs/common';
 import { JwtService } from '@nestjs/jwt';
 import { UsersService } from 'src/users/users.service';
 import User from 'src/users/entities/user.entity';
+import { RESPONSE_MESSAGES } from 'src/common/config';
 
 @Injectable()
 export class AuthService {
@@ -52,11 +53,11 @@ export class AuthService {
     }
   }
 
-  async getUserFromRequest(req: Request): Promise<User> {
+  async validateAndGetUserFromRequest(req: Request): Promise<User> {
     const token = req.headers.authorization?.split(' ')[1];
     const userData = await this.verifyTokenAndExtractUser(token);
     if (!userData) {
-      throw new UnauthorizedException('Unauthorized access');
+      throw new UnauthorizedException(RESPONSE_MESSAGES.es.UNAUTHORIZED_ACCESS);
     }
     return userData;
   }

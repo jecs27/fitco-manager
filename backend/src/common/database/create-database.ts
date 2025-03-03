@@ -2,6 +2,7 @@ import 'dotenv/config';
 import { DataSource } from 'typeorm';
 
 import User from 'src/users/entities/user.entity';
+import Client from 'src/clients/entities/client.entity';
 
 const {
   DATABASE_HOST,
@@ -20,7 +21,7 @@ export const dataSource = new DataSource({
   database: DATABASE_NAME,
   synchronize: false,
   logging: ['error'],
-  entities: [User],
+  entities: [User, Client],
   migrations: [__dirname + '/migrations/**/*{.ts,.js}'],
 });
 
