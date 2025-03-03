@@ -22,6 +22,14 @@ export const RESPONSE_MESSAGES = {
     MEAL_DATA_OBTAINED: 'Datos de la comida obtenidos correctamente',
     MEAL_UPDATED_SUCCESSFULLY: 'Comida actualizada correctamente',
     MEAL_DELETED_SUCCESSFULLY: 'Comida eliminada correctamente',
+
+    MEAL_PLAN_CREATED_SUCCESSFULLY: 'Plan de comida creado correctamente',
+    MEAL_PLAN_LIST_OBTAINED: 'Lista de planes de comida obtenida correctamente',
+    MEAL_PLAN_NOT_FOUND: 'Plan de comida no encontrado',
+    MEAL_PLAN_ALREADY_EXISTS: 'Ya existe un plan de comida para esta fecha',
+    MEAL_PLAN_DATA_OBTAINED: 'Datos del plan de comida obtenidos correctamente',
+    MEAL_PLAN_UPDATED_SUCCESSFULLY: 'Plan de comida actualizado correctamente',
+    MEAL_PLAN_DELETED_SUCCESSFULLY: 'Plan de comida eliminado correctamente',
   },
   en: {
     UNAUTHORIZED_ACCESS: 'Unauthorized access',
@@ -46,5 +54,13 @@ export const RESPONSE_MESSAGES = {
     MEAL_DATA_OBTAINED: 'Meal data obtained successfully',
     MEAL_UPDATED_SUCCESSFULLY: 'Meal updated successfully',
     MEAL_DELETED_SUCCESSFULLY: 'Meal deleted successfully',
+
+    MEAL_PLAN_CREATED_SUCCESSFULLY: 'Meal plan created successfully',
+    MEAL_PLAN_LIST_OBTAINED: 'Meal plan list obtained successfully',
+    MEAL_PLAN_NOT_FOUND: 'Meal plan could not be found',
+    MEAL_PLAN_ALREADY_EXISTS: 'Meal plan already exists',
+    MEAL_PLAN_DATA_OBTAINED: 'Meal plan data obtained successfully',
+    MEAL_PLAN_UPDATED_SUCCESSFULLY: 'Meal plan updated successfully',
+    MEAL_PLAN_DELETED_SUCCESSFULLY: 'Meal plan deleted successfully',
   },
 };
