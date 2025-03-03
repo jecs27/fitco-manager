@@ -1,10 +1,12 @@
-import { IsString, IsEmail, IsOptional } from 'class-validator';
+import { IsString, IsEmail, IsOptional, Length } from 'class-validator';
+import { RESPONSE_MESSAGES } from 'src/common/config';
 
 export class CreateClientDto {
   @IsString()
   name: string;
 
   @IsString()
+  @Length(10, 10, { message: RESPONSE_MESSAGES.es.PHONE_NUMBER_INVALID })
   phone: string;
 
   @IsEmail()

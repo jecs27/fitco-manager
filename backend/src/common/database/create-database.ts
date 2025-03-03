@@ -3,6 +3,7 @@ import { DataSource } from 'typeorm';
 
 import User from 'src/users/entities/user.entity';
 import Client from 'src/clients/entities/client.entity';
+import Meal from 'src/meals/entities/meal.entity';
 
 const {
   DATABASE_HOST,
@@ -21,7 +22,7 @@ export const dataSource = new DataSource({
   database: DATABASE_NAME,
   synchronize: false,
   logging: ['error'],
-  entities: [User, Client],
+  entities: [User, Client, Meal],
   migrations: [__dirname + '/migrations/**/*{.ts,.js}'],
 });
 

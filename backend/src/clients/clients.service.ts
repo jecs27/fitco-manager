@@ -1,5 +1,5 @@
 import { Injectable, NotFoundException } from '@nestjs/common';
-import { DataSource, Repository } from 'typeorm';
+import { DataSource, Not, Repository } from 'typeorm';
 import Client from './entities/client.entity';
 import { CreateClientDto } from './dto/create-client.dto';
 import { UpdateClientDto } from './dto/update-client.dto';
@@ -20,6 +20,10 @@ export class ClientsService {
 
     if (existingClient) {
       throw new NotFoundException(RESPONSE_MESSAGES.es.EMAIL_ALREADY_TAKEN);
+    }
+
+    if (client.emergencyPhone && client.emergencyPhone.length !== 10) {
+      throw new NotFoundException(RESPONSE_MESSAGES.es.PHONE_NUMBER_INVALID);
     }
 
     const newClient = await this.clientRepository.save(client);
@@ -70,6 +74,17 @@ export class ClientsService {
 
     if (!client) {
       throw new NotFoundException(RESPONSE_MESSAGES.es.CLIENT_NOT_FOUND);
+    }
+
+    const existingClient = await this.clientRepository.findOne({
+      where: {
+        email: updateClientDto.email,
+        uuid: Not(uuid),
+      },
+    });
+
+    if (existingClient) {
+      throw new NotFoundException(RESPONSE_MESSAGES.es.EMAIL_ALREADY_TAKEN);
     }
 
     const clientUpdated = await this.clientRepository.save({

@@ -53,6 +53,7 @@ export class UsersService {
           userId: true,
           username: true,
           email: true,
+          password: true,
           name: true,
         },
       });

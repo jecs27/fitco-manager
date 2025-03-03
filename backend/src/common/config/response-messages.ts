@@ -2,8 +2,9 @@ export const RESPONSE_MESSAGES = {
   es: {
     UNAUTHORIZED_ACCESS: 'Acceso no autorizado',
     INVALID_CREDENTIALS: 'Credenciales inválidas',
-    EMAIL_ALREADY_TAKEN: 'El correo electrónico ya existe',
-
+    EMAIL_ALREADY_TAKEN: 'El correo electrónico ya está en uso',
+    EMAIL_NOT_ALLOWED: 'El correo electrónico no es permitido',
+    PHONE_NUMBER_INVALID: 'El número de teléfono no es válido',
     USER_DATA_FOUND: 'Datos del usuario obtenidos correctamente',
 
     CLIENT_CREATED_SUCCESSFULLY: 'Cliente creado correctamente',
@@ -13,12 +14,21 @@ export const RESPONSE_MESSAGES = {
     CLIENT_DATA_OBTAINED: 'Datos del cliente obtenidos correctamente',
     CLIENT_UPDATED_SUCCESSFULLY: 'Cliente actualizado correctamente',
     CLIENT_DELETED_SUCCESSFULLY: 'Cliente eliminado correctamente',
+
+    MEAL_CREATED_SUCCESSFULLY: 'Comida creada correctamente',
+    MEAL_LIST_OBTAINED: 'Lista de comidas obtenida correctamente',
+    MEAL_NOT_FOUND: 'Comida no encontrada',
+    MEAL_ALREADY_EXISTS: 'Ya existe una comida con este nombre',
+    MEAL_DATA_OBTAINED: 'Datos de la comida obtenidos correctamente',
+    MEAL_UPDATED_SUCCESSFULLY: 'Comida actualizada correctamente',
+    MEAL_DELETED_SUCCESSFULLY: 'Comida eliminada correctamente',
   },
   en: {
     UNAUTHORIZED_ACCESS: 'Unauthorized access',
     INVALID_CREDENTIALS: 'Invalid credentials',
     EMAIL_ALREADY_TAKEN: 'Email already taken',
-
+    PHONE_NUMBER_INVALID: 'Phone number is invalid',
+    EMAIL_NOT_ALLOWED: 'Email is not allowed',
     USER_DATA_FOUND: 'User data was found',
 
     CLIENT_CREATED_SUCCESSFULLY: 'Client created successfully',
@@ -28,5 +38,13 @@ export const RESPONSE_MESSAGES = {
     CLIENT_DATA_OBTAINED: 'Client data obtained successfully',
     CLIENT_UPDATED_SUCCESSFULLY: 'Client updated successfully',
     CLIENT_DELETED_SUCCESSFULLY: 'Client deleted successfully',
+
+    MEAL_CREATED_SUCCESSFULLY: 'Meal created successfully',
+    MEAL_LIST_OBTAINED: 'Meal list obtained successfully',
+    MEAL_NOT_FOUND: 'Meal could not be found',
+    MEAL_ALREADY_EXISTS: 'Meal already exists',
+    MEAL_DATA_OBTAINED: 'Meal data obtained successfully',
+    MEAL_UPDATED_SUCCESSFULLY: 'Meal updated successfully',
+    MEAL_DELETED_SUCCESSFULLY: 'Meal deleted successfully',
   },
 };
